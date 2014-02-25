@@ -7,12 +7,10 @@
     "example": "example",
     "test": "test"
   },
-  "dependencies": {
+  "devDependencies": {
     "concat-stream": "~1.4.1",
-    "tape": "~2.5.0",
-    "through": "~2.3.4"
+    "tape": "~2.5.0"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "tape test/*.js"
   },
