@@ -1,7 +1,7 @@
 var Stream = require('stream');
 
 function StreamArray(stack) {
-    Stream.Readable.call(this, {objectMode:true});
+    Stream.Readable.call(this, { objectMode: true });
     this._stack = stack.slice();
 }
 
@@ -10,8 +10,7 @@ StreamArray.prototype = Object.create(Stream.Readable.prototype, {
 });
 
 StreamArray.prototype._read = function(size) {
-    var chunk = this._stack.splice(0, size);
-    this.push(chunk.length ? chunk : null);
+    this.push(this._stack.shift());
 };
 
 module.exports = function fifo(capacity) {

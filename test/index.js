@@ -9,15 +9,15 @@ test('fifo', function(t) {
         q.write(i);
     }
     q.stack().pipe(concat(function(res) {
-        t.deepEqual(res, [0, 1, 2]);
+        t.deepEqual(res.toString(), '012');
     }));
     q.stack().pipe(concat(function(res) {
-        t.deepEqual(res, [0, 1, 2]);
+        t.deepEqual(res.toString(), '012');
     }));
     for (var i = 3; i < 20; i++) {
         q.write(i);
     }
     q.stack().pipe(concat(function(res) {
-        t.deepEqual(res, [17, 18, 19]);
+        t.deepEqual(res.toString(), '171819');
     }));
 });
