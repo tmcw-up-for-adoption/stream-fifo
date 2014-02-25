@@ -1,0 +1,33 @@
+{
+  "name": "stream-fifo",
+  "version": "0.0.0",
+  "description": "a fifo stack for streams",
+  "main": "index.js",
+  "directories": {
+    "example": "example",
+    "test": "test"
+  },
+  "dependencies": {
+    "concat-stream": "~1.4.1",
+    "tape": "~2.5.0",
+    "through": "~2.3.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tmcw/stream-fifo.git"
+  },
+  "keywords": [
+    "stream",
+    "queue"
+  ],
+  "author": "Tom MacWright",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/tmcw/stream-fifo/issues"
+  },
+  "homepage": "https://github.com/tmcw/stream-fifo"
+}
