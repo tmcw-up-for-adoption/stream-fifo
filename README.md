@@ -22,3 +22,8 @@ q.stack().on('data', function(data) {
 ### `fifo(capacity)`
 
 Creates a writable stream, with a specified capacity.
+
+### `stream.stack()`
+
+Creates a readable stream that emits the last up-to `capacity` items that
+were sent through the stream.
